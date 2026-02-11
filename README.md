@@ -1,32 +1,32 @@
 # Gitton Plugins Monorepo
 
-Gitton公式プラグインとTypeScript型定義のmonorepoです。
+This is a monorepo for Gitton's official plugins and TypeScript type definitions.
 
 ## Packages
 
 | Package | Description | npm |
-|---------|-------------|-----|
-| [@gitton-dev/cli](./packages/cli) | プラグイン管理CLI | [![npm](https://img.shields.io/npm/v/@gitton-dev/cli)](https://www.npmjs.com/package/@gitton-dev/cli) |
-| [@gitton-dev/types](./packages/types) | Gitton Plugin TypeScript型定義 | [![npm](https://img.shields.io/npm/v/@gitton-dev/types)](https://www.npmjs.com/package/@gitton-dev/types) |
-| [@gitton-dev/plugin-dependency-graph](./packages/plugin-dependency-graph) | ファイル依存関係の可視化 | [![npm](https://img.shields.io/npm/v/@gitton-dev/plugin-dependency-graph)](https://www.npmjs.com/package/@gitton-dev/plugin-dependency-graph) |
-| [@gitton-dev/plugin-git-hooks](./packages/plugin-git-hooks) | Gitフックの管理UI | [![npm](https://img.shields.io/npm/v/@gitton-dev/plugin-git-hooks)](https://www.npmjs.com/package/@gitton-dev/plugin-git-hooks) |
-| [@gitton-dev/plugin-github-actions](./packages/plugin-github-actions) | GitHub Actionsの表示と実行 | [![npm](https://img.shields.io/npm/v/@gitton-dev/plugin-github-actions)](https://www.npmjs.com/package/@gitton-dev/plugin-github-actions) |
+|---|---|---|
+| [@gitton-dev/cli](./packages/cli) | Plugin management CLI | [![npm](https://img.shields.io/npm/v/@gitton-dev/cli)](https://www.npmjs.com/package/@gitton-dev/cli) |
+| [@gitton-dev/types](./packages/types) | Gitton Plugin TypeScript Type Definitions | [![npm](https://img.shields.io/npm/v/@gitton-dev/types)](https://www.npmjs.com/package/@gitton-dev/types) |
+| [@gitton-dev/plugin-dependency-graph](./packages/plugin-dependency-graph) | Visualize file dependencies | [![npm](https://img.shields.io/npm/v/@gitton-dev/plugin-dependency-graph)](https://www.npmjs.com/package/@gitton-dev/plugin-dependency-graph) |
+| [@gitton-dev/plugin-git-hooks](./packages/plugin-git-hooks) | Git hooks management UI | [![npm](https://img.shields.io/npm/v/@gitton-dev/plugin-git-hooks)](https://www.npmjs.com/package/@gitton-dev/plugin-git-hooks) |
+| [@gitton-dev/plugin-github-actions](./packages/plugin-github-actions) | Display and execute GitHub Actions | [![npm](https://img.shields.io/npm/v/@gitton-dev/plugin-github-actions)](https://www.npmjs.com/package/@gitton-dev/plugin-github-actions) |
 
 ## Plugin Installation
 
-CLIを使ってプラグインをインストールできます:
+You can install plugins using the CLI:
 
 ```bash
-# CLIをインストール
+# Install the CLI
 npm install -g @gitton-dev/cli
 
-# プラグインをインストール
+# Install a plugin
 gitton install github-actions
 
-# インストール済みプラグインを一覧
+# List installed plugins
 gitton list
 
-# プラグインをアンインストール
+# Uninstall a plugin
 gitton uninstall github-actions
 ```
 
