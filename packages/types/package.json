@@ -1,6 +1,6 @@
 {
   "name": "@gitton-dev/types",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "TypeScript type definitions for Gitton plugins",
   "main": "gitton-plugin.d.ts",
   "types": "gitton-plugin.d.ts",

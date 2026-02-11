@@ -1,0 +1,19 @@
+# Development files
+src/
+node_modules/
+.turbo/
+*.tsbuildinfo
+
+# Config files
+vite.config.ts
+tsconfig.json
+tsconfig.node.json
+postcss.config.js
+tailwind.config.js
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
