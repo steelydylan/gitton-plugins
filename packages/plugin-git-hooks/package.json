@@ -1,6 +1,6 @@
 {
   "name": "@gitton-dev/plugin-git-hooks",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Manage Git hooks with a visual interface",
   "type": "module",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "gitton": {
     "displayName": "Git Hooks",
-    "version": "1.0.0",
+    "version": "0.0.0",
     "description": "Manage Git hooks with a visual interface",
     "author": "Gitton Team",
     "permissions": [

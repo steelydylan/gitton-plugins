@@ -1,6 +1,6 @@
 {
   "name": "@gitton-dev/plugin-dependency-graph",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Visualize file dependencies in your project",
   "type": "module",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "gitton": {
     "displayName": "Dependency Graph",
-    "version": "1.0.0",
+    "version": "0.0.0",
     "description": "Visualize import/require dependencies between files",
     "author": "Gitton Team",
     "permissions": [
