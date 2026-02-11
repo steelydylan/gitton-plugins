@@ -7,9 +7,10 @@
     "gitton": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm --dts --clean",
-    "dev": "tsup src/index.ts --format esm --watch",
-    "clean": "rm -rf dist"
+    "generate": "tsx scripts/generate-plugin-list.ts",
+    "build": "pnpm generate && tsup src/index.ts --format esm --dts --clean",
+    "dev": "pnpm generate && tsup src/index.ts --format esm --watch",
+    "clean": "rm -rf dist src/generated"
   },
   "files": [
     "dist"
@@ -31,14 +32,15 @@
   },
   "homepage": "https://jsers.dev/service/gitton",
   "dependencies": {
+    "chalk": "^5.4.1",
     "commander": "^13.1.0",
-    "pacote": "^21.0.0",
-    "chalk": "^5.4.1"
+    "pacote": "^21.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.13.4",
     "@types/pacote": "^11.1.8",
     "tsup": "^8.4.0",
+    "tsx": "^4.21.0",
     "typescript": "^5.7.3"
   }
 }

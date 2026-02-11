@@ -3,6 +3,7 @@
 import { Command } from 'commander'
 import { install } from './commands/install.js'
 import { list } from './commands/list.js'
+import { search } from './commands/search.js'
 import { uninstall } from './commands/uninstall.js'
 
 const program = new Command()
@@ -32,5 +33,11 @@ program
   .description('List installed Gitton plugins')
   .option('--dev', 'List plugins from development directory')
   .action(list)
+
+program
+  .command('search [query]')
+  .alias('s')
+  .description('Search available Gitton plugins on npm')
+  .action(search)
 
 program.parse()
