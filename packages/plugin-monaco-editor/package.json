@@ -1,6 +1,6 @@
 {
   "name": "@gitton-dev/plugin-monaco-editor",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Monaco Editor extension for Gitton",
   "type": "module",
   "scripts": {

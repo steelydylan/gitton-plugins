@@ -1,6 +1,6 @@
 {
   "name": "@gitton-dev/plugin-dependency-graph",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Visualize file dependencies in your project",
   "type": "module",
   "scripts": {
