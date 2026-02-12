@@ -31,6 +31,70 @@
         "entry": "ui/src/settings/index.html",
         "label": "Zenn Markdown"
       }
+    },
+    "security": {
+      "allowedDomains": [
+        {
+          "domain": "https://unpkg.com",
+          "types": ["script", "style", "font"],
+          "description": "KaTeX math rendering resources"
+        },
+        {
+          "domain": "https://embed.zenn.studio",
+          "types": ["frame"],
+          "description": "Zenn embed server (card, tweet, gist, mermaid)"
+        },
+        {
+          "domain": "https://www.youtube-nocookie.com",
+          "types": ["frame"],
+          "description": "YouTube video embeds (privacy-enhanced mode)"
+        },
+        {
+          "domain": "https://speakerdeck.com",
+          "types": ["frame"],
+          "description": "Speaker Deck slide embeds"
+        },
+        {
+          "domain": "https://www.slideshare.net",
+          "types": ["frame"],
+          "description": "SlideShare slide embeds"
+        },
+        {
+          "domain": "https://codepen.io",
+          "types": ["frame"],
+          "description": "CodePen embeds"
+        },
+        {
+          "domain": "https://codesandbox.io",
+          "types": ["frame"],
+          "description": "CodeSandbox embeds"
+        },
+        {
+          "domain": "https://stackblitz.com",
+          "types": ["frame"],
+          "description": "StackBlitz embeds"
+        },
+        {
+          "domain": "https://www.figma.com",
+          "types": ["frame"],
+          "description": "Figma design embeds"
+        },
+        {
+          "domain": "https://jsfiddle.net",
+          "types": ["frame"],
+          "description": "JSFiddle embeds"
+        },
+        {
+          "domain": "https://docswell.com",
+          "types": ["frame"],
+          "description": "Docswell slide embeds"
+        },
+        {
+          "domain": "https://blueprintue.com",
+          "types": ["frame"],
+          "description": "BlueprintUE embeds"
+        }
+      ]
     }
   },
   "files": [

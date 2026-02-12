@@ -109,6 +109,31 @@ export interface ExtensionPoints {
 }
 
 /**
+ * Types of resources that can be loaded from external domains
+ */
+export type AllowedDomainType = 'frame' | 'script' | 'style' | 'font' | 'connect'
+
+/**
+ * External domain that the plugin needs access to
+ */
+export interface AllowedDomain {
+  /** Domain URL (e.g., "https://unpkg.com") */
+  domain: string
+  /** Types of resources to allow from this domain */
+  types: AllowedDomainType[]
+  /** Human-readable description for settings UI */
+  description: string
+}
+
+/**
+ * Plugin security settings
+ */
+export interface PluginSecurity {
+  /** External domains that this plugin needs to load resources from */
+  allowedDomains?: AllowedDomain[]
+}
+
+/**
  * Plugin manifest (gitton field in package.json)
  */
 export interface PluginManifest {
@@ -132,6 +157,8 @@ export interface PluginManifest {
   extensionPoints?: ExtensionPoints
   /** JSON Schema for plugin configuration */
   configSchema?: Record<string, unknown>
+  /** Security settings including allowed external domains */
+  security?: PluginSecurity
 }
 
 /**
