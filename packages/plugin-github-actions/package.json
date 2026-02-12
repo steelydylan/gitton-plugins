@@ -19,7 +19,8 @@
       "ui:settings",
       "settings:read",
       "settings:write",
-      "network:fetch"
+      "network:fetch",
+      "git:read"
     ],
     "extensionPoints": {
       "sidebar": {

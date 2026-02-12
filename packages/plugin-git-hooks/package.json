@@ -16,7 +16,9 @@
     "author": "Gitton Team",
     "permissions": [
       "ui:repositorySettings",
-      "git:hooks"
+      "git:hooks",
+      "git:read",
+      "git:write"
     ],
     "extensionPoints": {
       "repositorySettings": {

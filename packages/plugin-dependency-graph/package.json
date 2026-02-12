@@ -18,7 +18,8 @@
       "ui:sidebar",
       "ui:settings",
       "settings:read",
-      "settings:write"
+      "settings:write",
+      "git:read"
     ],
     "extensionPoints": {
       "sidebar": {
