@@ -1,6 +1,6 @@
 {
   "name": "@gitton-dev/cli",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "CLI tool for managing Gitton plugins",
   "type": "module",
   "bin": {

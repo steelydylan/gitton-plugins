@@ -1,6 +1,6 @@
 {
   "name": "@gitton-dev/plugin-git-hooks",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Manage Git hooks with a visual interface",
   "type": "module",
   "scripts": {
