@@ -15,7 +15,8 @@
     "description": "Render markdown with Zenn-style syntax (:::message, :::details, @[youtube], etc.)",
     "author": "Gitton Team",
     "permissions": [
-      "ui:settings"
+      "ui:settings",
+      "ui:markdown"
     ],
     "extensionPoints": {
       "markdown": {
