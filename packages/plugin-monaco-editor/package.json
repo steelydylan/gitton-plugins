@@ -1,0 +1,61 @@
+{
+  "name": "@gitton-dev/plugin-monaco-editor",
+  "version": "0.0.1",
+  "description": "Monaco Editor extension for Gitton",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf ui node_modules/.vite"
+  },
+  "gitton": {
+    "displayName": "Monaco Editor",
+    "version": "0.0.1",
+    "description": "Enhanced file editor powered by Monaco Editor with syntax highlighting",
+    "author": "Gitton Team",
+    "permissions": [
+      "ui:editor",
+      "git:read"
+    ],
+    "extensionPoints": {
+      "editor": {
+        "name": "Monaco Editor",
+        "filePatterns": [
+          "*"
+        ],
+        "priority": 1,
+        "entry": "ui/src/editor/index.html"
+      }
+    }
+  },
+  "files": [
+    "ui",
+    "package.json"
+  ],
+  "keywords": [
+    "gitton",
+    "gitton-plugin",
+    "monaco-editor",
+    "editor"
+  ],
+  "author": "godai",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gitton-dev/gitton-plugins.git",
+    "directory": "packages/plugin-monaco-editor"
+  },
+  "bugs": {
+    "url": "https://github.com/gitton-dev/gitton-plugins/issues"
+  },
+  "homepage": "https://jsers.dev/service/gitton",
+  "devDependencies": {
+    "@gitton-dev/types": "workspace:*",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11"
+  },
+  "dependencies": {
+    "monaco-editor": "^0.52.2"
+  }
+}
