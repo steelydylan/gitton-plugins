@@ -1,4 +1,4 @@
-import { render } from '../renderer'
+import { render, init } from '../renderer'
 
 // Load zenn-content-css from CDN
 const zennCssLink = document.createElement('link')
@@ -33,22 +33,38 @@ function applyTheme(theme: string) {
   }
 }
 
-// Listen for content from parent
+// Listen for messages from parent (using PluginFrame protocol)
 window.addEventListener('message', async (event) => {
-  if (event.data.type === 'render') {
-    try {
-      const html = await render(event.data.content, event.data.options || {})
-      root.innerHTML = html
-
-      // Send height back to parent for auto-resize
-      const height = document.body.scrollHeight
-      window.gitton.postMessage.send({ type: 'resize', height })
-    } catch (error) {
-      console.error('Render error:', error)
-      root.innerHTML = '<pre style="color:red;">' + (error as Error).message + '</pre>'
+  // Handle gitton:context (sent by PluginFrame for theme/repoPath)
+  if (event.data.type === 'gitton:context') {
+    if (event.data.context?.theme) {
+      applyTheme(event.data.context.theme)
     }
-  } else if (event.data.type === 'theme') {
-    applyTheme(event.data.theme)
+    return
+  }
+
+  // Handle gitton:custom messages (render content, etc.)
+  if (event.data.type === 'gitton:custom') {
+    const { messageType, payload } = event.data
+
+    if (messageType === 'render') {
+      try {
+        const html = await render(payload.content as string, payload.options || {})
+        root.innerHTML = html
+
+        // Send height back to parent for auto-resize
+        const height = document.body.scrollHeight
+        window.gitton.postMessage.send({
+          type: 'gitton:custom',
+          pluginId: window.gitton.pluginId,
+          messageType: 'resize',
+          payload: { height }
+        })
+      } catch (error) {
+        console.error('Render error:', error)
+        root.innerHTML = '<pre style="color:red;">' + (error as Error).message + '</pre>'
+      }
+    }
   }
 })
 
@@ -65,10 +81,10 @@ if (typeof window.gitton !== 'undefined' && window.gitton?.context?.theme) {
   applyTheme(window.gitton.context.theme)
 }
 
-// Signal ready
-window.gitton.postMessage.send({ type: 'ready' })
-
 // Load Zenn embed script
 const script = document.createElement('script')
 script.src = 'https://embed.zenn.studio/js/listen-embed-event.js'
 document.body.appendChild(script)
+
+// Initialize link click handlers
+init()

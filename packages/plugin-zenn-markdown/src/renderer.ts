@@ -197,3 +197,24 @@ export function render(content: string, _options?: object): string {
 
   return headerHtml + bodyHtml
 }
+
+/**
+ * Initialize link click handlers to open external URLs via Gitton API
+ */
+export function init(): void {
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement
+    const anchor = target.closest('a')
+    if (anchor && anchor.href) {
+      const url = anchor.href
+      // Only handle http/https URLs
+      if (url.startsWith('http://') || url.startsWith('https://')) {
+        e.preventDefault()
+        // Use Gitton plugin API to open external URL
+        if (typeof window !== 'undefined' && window.gitton?.ui?.openExternal) {
+          window.gitton.ui.openExternal(url)
+        }
+      }
+    }
+  })
+}
