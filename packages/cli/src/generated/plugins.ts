@@ -11,37 +11,44 @@ export interface PluginInfo {
 
 export const availablePlugins: PluginInfo[] = [
   {
+    "name": "@gitton-dev/plugin-browser",
+    "shortName": "browser",
+    "version": "0.0.1",
+    "description": "Open localhost URLs in your default browser",
+    "displayName": "Browser Preview"
+  },
+  {
     "name": "@gitton-dev/plugin-dependency-graph",
     "shortName": "dependency-graph",
-    "version": "0.0.14",
+    "version": "0.0.16",
     "description": "Visualize import/require dependencies between files",
     "displayName": "Dependency Graph"
   },
   {
     "name": "@gitton-dev/plugin-git-hooks",
     "shortName": "git-hooks",
-    "version": "0.0.14",
+    "version": "0.0.16",
     "description": "Manage Git hooks with a visual interface",
     "displayName": "Git Hooks"
   },
   {
     "name": "@gitton-dev/plugin-github-actions",
     "shortName": "github-actions",
-    "version": "0.0.14",
+    "version": "0.0.16",
     "description": "View and trigger GitHub Actions workflows",
     "displayName": "GitHub Actions"
   },
   {
     "name": "@gitton-dev/plugin-monaco-editor",
     "shortName": "monaco-editor",
-    "version": "0.0.5",
+    "version": "0.0.7",
     "description": "Enhanced file editor powered by Monaco Editor with syntax highlighting",
     "displayName": "Monaco Editor"
   },
   {
     "name": "@gitton-dev/plugin-zenn-markdown",
     "shortName": "zenn-markdown",
-    "version": "0.0.11",
+    "version": "0.0.13",
     "description": "Render markdown with Zenn-style syntax (:::message, :::details, @[youtube], etc.)",
     "displayName": "Zenn Markdown"
   }

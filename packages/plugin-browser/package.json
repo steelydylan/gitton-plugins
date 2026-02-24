@@ -1,0 +1,107 @@
+{
+  "name": "@gitton-dev/plugin-browser",
+  "version": "0.0.1",
+  "description": "Open localhost URLs in your default browser from Gitton",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf ui node_modules/.vite"
+  },
+  "gitton": {
+    "displayName": "Browser Preview",
+    "version": "0.0.1",
+    "description": "Open localhost URLs in your default browser",
+    "author": "Gitton Team",
+    "icon": "Globe",
+    "permissions": [
+      "ui:sidebar",
+      "ui:settings",
+      "settings:read",
+      "settings:write"
+    ],
+    "extensionPoints": {
+      "sidebar": {
+        "entry": "ui/src/sidebar/index.html",
+        "icon": "Globe",
+        "position": "top"
+      },
+      "settingsTab": {
+        "entry": "ui/src/settings/index.html",
+        "label": "Browser Preview"
+      }
+    },
+    "security": {
+      "allowedDomains": [
+        {
+          "domain": "http://localhost:*",
+          "types": ["frame", "connect"],
+          "description": "Allow localhost URLs for browser preview"
+        },
+        {
+          "domain": "http://127.0.0.1:*",
+          "types": ["frame", "connect"],
+          "description": "Allow localhost URLs for browser preview"
+        }
+      ]
+    },
+    "configSchema": {
+      "type": "object",
+      "properties": {
+        "urls": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "url": { "type": "string" }
+            }
+          },
+          "default": [
+            { "name": "Dev Server", "url": "http://localhost:3000" }
+          ]
+        }
+      }
+    }
+  },
+  "files": [
+    "ui",
+    "package.json"
+  ],
+  "keywords": [
+    "gitton",
+    "gitton-plugin",
+    "browser",
+    "preview",
+    "localhost"
+  ],
+  "author": "godai",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gitton-dev/gitton-plugins.git",
+    "directory": "packages/plugin-browser"
+  },
+  "bugs": {
+    "url": "https://github.com/gitton-dev/gitton-plugins/issues"
+  },
+  "homepage": "https://jsers.dev/service/gitton",
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.469.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.6.0"
+  }
+}
