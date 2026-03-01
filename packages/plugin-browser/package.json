@@ -1,6 +1,6 @@
 {
   "name": "@gitton-dev/plugin-browser",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Open localhost URLs in your default browser from Gitton",
   "type": "module",
   "scripts": {

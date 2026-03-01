@@ -1,6 +1,6 @@
 {
   "name": "@gitton-dev/plugin-github-actions",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "View and trigger GitHub Actions workflows from Gitton",
   "type": "module",
   "scripts": {
