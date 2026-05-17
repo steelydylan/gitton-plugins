@@ -10,6 +10,7 @@
     "clean": "rm -rf ui node_modules/.vite"
   },
   "gitton": {
+    "draft": true,
     "displayName": "Browser Preview",
     "version": "0.0.1",
     "description": "Open localhost URLs in your default browser",

@@ -10,6 +10,7 @@
     "clean": "rm -rf dist node_modules/.vite"
   },
   "gitton": {
+    "draft": true,
     "displayName": "Dependency Graph",
     "version": "0.0.0",
     "description": "Visualize import/require dependencies between files",
