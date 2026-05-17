@@ -28,6 +28,7 @@ for (const entry of entries) {
     const pkg = JSON.parse(content)
 
     if (pkg.gitton) {
+      if (pkg.gitton.draft) continue
       plugins.push({
         name: pkg.name,
         shortName: entry.name.replace('plugin-', ''),
